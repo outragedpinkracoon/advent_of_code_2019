@@ -22,7 +22,7 @@ defmodule Day2 do
     end
   end
 
-  # Takes in a list and exits the program if it sees a 99 in the next 4 digits
+  # Takes in a list and exits the program if it sees a 99 as the first of the 4 digits
   # Otherwise, runs the computation and updates the value at the index given
   defp compute_and_update([99|_], result, _), do: result
   defp compute_and_update([operation | [index1, index2, position | _]], input_string, start_index) do
