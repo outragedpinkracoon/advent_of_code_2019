@@ -3,10 +3,13 @@ defmodule Day3Test do
   doctest Day3
 
   test "greets the world" do
-    assert Day3.hello() == :world
+    assert Day3.run([12]) == 2
+    assert Day3.run([14]) == 2
+    assert Day3.run([1969]) == 654
+    assert Day3.run([100756]) == 33583
+    assert Day3.run([12, 1969]) == 656
   end
 
-  @tag :skip
   test "full input" do
     input = [
       89822, 149236, 106135, 147663, 91417, 59765, 66470, 121156, 148632, 116660, 90316, 111666, 142111, 72595,
@@ -18,9 +21,8 @@ defmodule Day3Test do
       51173, 135047, 110175, 93722, 82611, 128288, 125225, 104177, 115081, 78470, 96167, 138445, 117778, 100133,
       140047
     ]
+    expected = 3553700
 
-    expected = 99
-
-    assert input == expected
+    assert Day3.run(input) == expected
   end
 end
