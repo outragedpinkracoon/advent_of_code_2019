@@ -3,7 +3,7 @@ defmodule Day4Test do
   doctest Day4
 
   test "run" do
-    assert Day4.run(156218, 652527)
+    assert Day4.run(156218, 652527) == 1694
   end
 
   test "#valid?" do
