@@ -1,0 +1,16 @@
+COM)B
+B)C
+B)G
+G)H
+
+B -> [COM],
+C -> [B -> [B, COM]],
+G -> [B -> [B, COM]],
+H -> [G -> [G,B -> [B,COM]]]
+
+B -> COM
+C -> B
+G -> B
+H -> G
+
+# Count the lookups in the hash
